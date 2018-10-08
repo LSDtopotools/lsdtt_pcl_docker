@@ -54,4 +54,5 @@ WORKDIR /LSDTopoTools
 
 # Copy the startup script
 COPY Start_LSDTT.sh /usr/local/bin/
-chmod +x /usr/local/bin/Start_LSDTT.sh
+RUN chmod +x /usr/local/bin/Start_LSDTT.sh
+
