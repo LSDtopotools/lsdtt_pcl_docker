@@ -1,6 +1,6 @@
 # The *LSDTopoTools* complete container
 
-![](./images/LSD-logo.png)
+![](https://raw.githubusercontent.com/LSDtopotools/lsdtt_alpine_docker/master/images/LSD-logo.png)
 
 This is the full *LSDTopoTools* distrubtion that includes the [Point Cloud Library (PCL)](https://en.wikipedia.org/wiki/Point_Cloud_Library). It is built on top of an Ubunutu operating system. This is a rather large (663 Mb) container since PCL is large and has many dependencies. If you don't anticipate [extracting terraces](https://www.earth-surf-dynam.net/5/369/2017/), [using swaths](https://www.earth-surf-dynam.net/2/97/2014/), or [playing with point clouds to estimate biomass](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/14-0649.1), then consider using the much more lightweight [LSDTopoTools Alpine container](https://hub.docker.com/r/lsdtopotools/lsdtt_alpine_docker/). 
 
