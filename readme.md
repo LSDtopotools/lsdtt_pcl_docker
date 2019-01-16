@@ -30,16 +30,17 @@ These are the bare bones instructions. For a bit more detail and potential bug f
 
 1. To get the container, go into a terminal (MacOS or Linux) or Powershell window (Windows) that has docker enabled and run:
 ```console
-$ docker pull lsdtopotools/lsdtt_docks_docker
+$ docker pull lsdtopotools/lsdtt_pcl_docker
 ```
 2. Now you need to run the container:
 ```console
-$ docker run -it -v C:\LSDTopoTools:/LSDTopoTools lsdtt_docs_docker
+$ docker run -it -v C:\LSDTopoTools:/LSDTopoTools lsdtopotools/lsdtt_pcl_docker
 ```
   1. The `-it` means "interactive".
   2. The `-v` stands for "volume" and in practice it links the files in the docker container with files in your host operating system. 
   3. After the `-v` you need to tell docker where the directories are on both the host operating system (in this case `C:\LSDTopoTools`) and the container (in this case `/LSDTopoTools`). These are separated by a colon (`:`).
 3. Once you do this you will get a `#` symbol showing that you are inside the container. You can now do *LSDTopoTools* stuff. 
+4. To exit the container use `ctrl-D`. The containers all have linux environments so you will be able to use linux command line tools within the docker container.
 
 ### Docker notes
 
@@ -54,12 +55,12 @@ List all containers
 $ docker ps -a
 ```
 
-List containsers with size
+List containers with size
 ```console
 $ docker ps -as
 ```
 
-Remove all unused conainers
+Remove all unused containers
 ```console
 $ docker system prune
 ```
@@ -92,4 +93,4 @@ Second, if you have that and have it installed, you might also need to add yours
 6. Also add your account to Hyper-V Administrator. This was added when you installed docker for Windows.
 7. Log off from Windows and log back on.
 8. Click on Windows icon on bottom left and start Docker for Windows. This will start docker windows service.
-9. Start Windows Powershell and type docker --version. It will show Docker version 17.09.1-ce, build 19e2cf6, or whagtever version you have.
+9. Start Windows Powershell and type docker --version. It will show Docker version 17.09.1-ce, build 19e2cf6, or whatever version you have.
