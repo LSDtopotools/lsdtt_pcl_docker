@@ -8,7 +8,10 @@
 #  * Code that includes swath profiling
 #  * Any code that includes biomass
 # If you are not a developer, the only place you will really encounter PCL is in the terrace code. 
-# If you do not plan to use this, we suggest using the lsdtt-alpine container. 
+# If you do not plan to use this, we suggest using the lsdtt-alpine container:
+# https://hub.docker.com/r/lsdtopotools/lsdtt_alpine_docker/
+# For documentation see:
+# https://lsdtopotools.github.io/LSDTT_documentation/
 
 # Pull base image.
 FROM ubuntu:18.04
@@ -46,8 +49,10 @@ RUN apt-get update && apt-get install -y \
     libproj-dev \
 && rm -rf /var/lib/apt/lists/*
 
+# Set the working directory
 WORKDIR /LSDTopoTools
 
 # Copy the startup script
 COPY Start_LSDTT.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/Start_LSDTT.sh
+
