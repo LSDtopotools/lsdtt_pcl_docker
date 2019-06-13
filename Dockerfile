@@ -47,3 +47,7 @@ RUN apt-get update && apt-get install -y \
 && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /LSDTopoTools
+
+# Copy the startup script
+COPY Start_LSDTT.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/Start_LSDTT.sh
