@@ -44,9 +44,15 @@ RUN apt-get update && apt-get install -y \
     libpcl-dev \
 && rm -rf /var/lib/apt/lists/*
 
-# Finally some projection tools
+# Install some projection tools
 RUN apt-get update && apt-get install -y \
     libproj-dev \
+&& rm -rf /var/lib/apt/lists/*
+
+# Install some simple scripts for zipping and fetching things from the internet
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \  
 && rm -rf /var/lib/apt/lists/*
 
 # Set the working directory
@@ -55,4 +61,8 @@ WORKDIR /LSDTopoTools
 # Copy the startup script
 COPY Start_LSDTT.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/Start_LSDTT.sh
+
+# Copy the script for fetching example data 
+COPY Get_LSDTT_example_data.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/Get_LSDTT_example_data.sh
 

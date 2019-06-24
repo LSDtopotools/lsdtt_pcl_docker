@@ -6,6 +6,10 @@ This is the full *LSDTopoTools* distrubtion that includes the [Point Cloud Libra
 
 Information about the automatically built container can be found here: https://hub.docker.com/r/lsdtopotools/lsdtt_pcl_docker/ 
 
+For full documentation, [see the LSDTopoTools documentation site](https://lsdtopotools.github.io/LSDTT_documentation/).
+
+You can also read [specific installation instruction](https://lsdtopotools.github.io/LSDTT_documentation/LSDTT_installation.html#_installing_lsdtopotools_using_docker).
+
 ## Instructions
 
 ### Installing Docker
